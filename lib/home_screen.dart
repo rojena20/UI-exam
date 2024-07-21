@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_exam/bestSeller_card.dart';
 
 //import 'package:motion_tab_bar/MotionBadgeWidget.dart';
 //import 'package:carousel_slider/carousel_slider.dart';
@@ -21,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      top: false,
+      top: true,
       child: DefaultTabController(
         initialIndex: 1,
         length: 4,
@@ -140,38 +141,84 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 10.0, left: 15.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              SingleChildScrollView(
+                child: Column(
                   children: [
-                    Text(
-                      "Recommended For You",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    Container(
+                      margin: EdgeInsets.only(top: 10.0, left: 15.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Recommended For You",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w500),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(right: 20.0),
+                            child: Text(
+                              "See more",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 72, 56, 209),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(right: 20.0),
-                      child: Text(
-                        "See more",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 72, 56, 209),
-                        ),
+                      height: 300,
+                      margin: EdgeInsets.only(left: 20.0, top: 10.0),
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.only(right: 15.0),
+                            child: Image.asset(
+                                "assets/images/Image Placeholder ${index + 1}.png"),
+                          );
+                        },
+                        itemCount: 2,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 10.0, left: 15.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Best Seller",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w500),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(right: 20.0),
+                            child: Text(
+                              "See more",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 72, 56, 209),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 200,
+                      margin: EdgeInsets.only(left: 20.0, top: 10.0),
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return BestsellerCard(index: index);
+                        },
+                        itemCount: 2,
                       ),
                     ),
                   ],
-                ),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return Image.asset(
-                        "assets/images/Image Placeholder ${index + 1}.png");
-                  },
-                  itemCount: 2,
                 ),
               ),
             ],
@@ -181,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Icon(
                 Icons.home_filled,
-                color: Color.fromARGB(150, 106, 106, 139),
+                color: Color.fromARGB(255, 72, 56, 209),
               ),
               Icon(
                 Icons.search,
