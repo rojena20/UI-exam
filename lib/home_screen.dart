@@ -164,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Icon(
                 Icons.home_filled,
-                color: Color.fromARGB(255, 72, 56, 209),
+                color: Color.fromARGB(150, 106, 106, 139),
               ),
               Icon(
                 Icons.search,
