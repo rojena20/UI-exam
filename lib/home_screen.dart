@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ui_exam/bestSeller_card.dart';
 import 'package:ui_exam/home_section_title.dart';
 
-//import 'package:motion_tab_bar/MotionBadgeWidget.dart';
-//import 'package:carousel_slider/carousel_slider.dart';
-//import 'package:chips_choice/chips_choice.dart';
-//import 'package:buttons_tabbar/buttons_tabbar.dart';
-//import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
-
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
 
@@ -80,9 +74,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               "Art",
                               style: TextStyle(
-                                  color: Color.fromARGB(255, 46, 46, 93),
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16),
+                                color: Color.fromARGB(255, 46, 46, 93),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
+                                fontSize: 16,
+                              ),
                             ),
                           ),
                         ),
@@ -93,7 +89,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 245, 245, 250),
                                 borderRadius: BorderRadius.circular(10.0)),
-                            child: Text("Business"),
+                            child: Text(
+                              "Business",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 46, 46, 93),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
+                                fontSize: 16,
+                              ),
+                            ),
                           ),
                         ),
                         Tab(
@@ -103,7 +107,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 245, 245, 250),
                                 borderRadius: BorderRadius.circular(10.0)),
-                            child: Text("Comedy"),
+                            child: Text(
+                              "Comedy",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 46, 46, 93),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
+                                fontSize: 16,
+                              ),
+                            ),
                           ),
                         ),
                         Tab(
@@ -113,7 +125,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 245, 245, 250),
                                 borderRadius: BorderRadius.circular(10.0)),
-                            child: Text("Drama"),
+                            child: Text(
+                              "Drama",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 46, 46, 93),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
+                                fontSize: 16,
+                              ),
+                            ),
                           ),
                         ),
                       ],

@@ -27,6 +27,7 @@ class FeatureCard extends StatelessWidget {
                     color: Color(0xff344054),
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Inter",
                   ),
                 ),
                 SizedBox(
@@ -37,6 +38,7 @@ class FeatureCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
+                    fontFamily: "Inter",
                   ),
                 ),
                 SizedBox(
@@ -56,6 +58,7 @@ class FeatureCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
+                        fontFamily: "Inter",
                       ),
                     )
                   ],

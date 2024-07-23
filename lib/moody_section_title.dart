@@ -15,7 +15,11 @@ class MoodySectionTitle extends StatelessWidget {
           Container(
             child: Text(
               secionTitle,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                fontFamily: "Inter",
+              ),
             ),
           ),
           Container(
@@ -26,6 +30,7 @@ class MoodySectionTitle extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Inter",
                     color: Color(0xff027A48),
                   ),
                 ),

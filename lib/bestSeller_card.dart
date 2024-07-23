@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class BestsellerCard extends StatelessWidget {
   int index;
-   BestsellerCard({super.key, required this.index});
+
+  BestsellerCard({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,8 @@ class BestsellerCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
-            "assets/images/bestSeller ${index + 1}.png",),
+            "assets/images/bestSeller ${index + 1}.png",
+          ),
           Container(
             margin: EdgeInsets.only(left: 10.0),
             child: Column(
@@ -23,6 +25,7 @@ class BestsellerCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
+                    fontFamily: "Poppins",
                   ),
                 ),
                 Text(
@@ -30,45 +33,50 @@ class BestsellerCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(
-                        255, 106, 106, 139),
+                    fontFamily: "Poppins",
+                    color: Color.fromARGB(255, 106, 106, 139),
                   ),
                 ),
-                SizedBox(height: 10.0,),
+                SizedBox(
+                  height: 10.0,
+                ),
                 Row(
                   children: [
                     Icon(
                       Icons.star,
-                      color: Color.fromARGB(
-                          255, 247, 122, 85),
+                      color: Color.fromARGB(255, 247, 122, 85),
                       size: 16,
                     ),
-                    SizedBox(width: 7.0,),
+                    SizedBox(
+                      width: 7.0,
+                    ),
                     Icon(
                       Icons.star,
-                      color: Color.fromARGB(
-                          255, 247, 122, 85),
+                      color: Color.fromARGB(255, 247, 122, 85),
                       size: 16,
                     ),
-                    SizedBox(width: 7.0,),
+                    SizedBox(
+                      width: 7.0,
+                    ),
                     Icon(
                       Icons.star,
-                      color: Color.fromARGB(
-                          255, 247, 122, 85),
+                      color: Color.fromARGB(255, 247, 122, 85),
                       size: 16,
                     ),
-                    SizedBox(width: 7.0,),
+                    SizedBox(
+                      width: 7.0,
+                    ),
                     Icon(
                       Icons.star,
-                      color: Color.fromARGB(
-                          255, 247, 122, 85),
+                      color: Color.fromARGB(255, 247, 122, 85),
                       size: 16,
                     ),
-                    SizedBox(width: 7.0,),
+                    SizedBox(
+                      width: 7.0,
+                    ),
                     Icon(
                       Icons.star_border_outlined,
-                      color: Color.fromARGB(
-                          255, 247, 122, 85),
+                      color: Color.fromARGB(255, 247, 122, 85),
                       size: 16,
                     ),
                   ],
@@ -78,8 +86,8 @@ class BestsellerCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(
-                        255, 106, 106, 139),
+                    fontFamily: "Poppins",
+                    color: Color.fromARGB(255, 106, 106, 139),
                   ),
                 ),
               ],

@@ -20,6 +20,7 @@ class FeelingsCard extends StatelessWidget {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w400,
+            fontFamily: "Inter",
           ),
         ),
       ],

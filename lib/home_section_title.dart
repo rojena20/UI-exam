@@ -14,7 +14,11 @@ class HomeSectionTitle extends StatelessWidget {
         children: [
           Text(
             sectionTitle,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Poppins",
+            ),
           ),
           Container(
             margin: EdgeInsets.only(right: 20.0),
@@ -23,6 +27,7 @@ class HomeSectionTitle extends StatelessWidget {
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
+                fontFamily: "Poppins",
                 color: Color.fromARGB(255, 72, 56, 209),
               ),
             ),

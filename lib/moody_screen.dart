@@ -7,7 +7,6 @@ import 'package:ui_exam/models/feature_card_model.dart';
 import 'package:ui_exam/models/feelings_card_model.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:ui_exam/moody_section_title.dart';
-//import 'package:badges/badges.dart' as badges;
 
 class MoodyScreen extends StatelessWidget {
   static const String routeName = "MoodyScreen";
@@ -44,13 +43,19 @@ class MoodyScreen extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: 'Hello, ',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Inter",
+                      ),
                     ),
                     TextSpan(
                       text: 'Sara Rose',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Inter",
+                      ),
                     ),
                   ],
                 ),
@@ -67,6 +72,7 @@ class MoodyScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
+                            fontFamily: "Inter",
                           ),
                         ),
                       ),
@@ -157,9 +163,10 @@ class MoodyScreen extends StatelessWidget {
                         children: [
                           ExerciseCard(
                             exerciseCardModel: ExerciseCardModel(
-                                exerciseImage: "breathing.png",
-                                exerciseText: "Breathing",
-                                cardBgColor: Color(0xffFFFAF5),),
+                              exerciseImage: "breathing.png",
+                              exerciseText: "Breathing",
+                              cardBgColor: Color(0xffFFFAF5),
+                            ),
                           ),
                           ExerciseCard(
                             exerciseCardModel: ExerciseCardModel(

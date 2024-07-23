@@ -10,7 +10,7 @@ void main() {
         HomeScreen.routeName: (context) => HomeScreen(),
         MoodyScreen.routeName: (context) => MoodyScreen(),
       },
-      initialRoute: MoodyScreen.routeName,
+      initialRoute: HomeScreen.routeName,
     ),
   );
 }
