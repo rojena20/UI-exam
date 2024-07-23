@@ -158,22 +158,29 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          bottomNavigationBar: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Icon(
-                Icons.home_filled,
-                color: Color.fromARGB(150, 106, 106, 139),
+          bottomNavigationBar: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home_filled,
+                ),
+                label: "Home",
               ),
-              Icon(
-                Icons.search,
-                color: Color.fromARGB(150, 106, 106, 139),
-              ),
-              Icon(
-                Icons.article_outlined,
-                color: Color.fromARGB(150, 106, 106, 139),
-              ),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.search,
+                  ),
+                  label: "Grid"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.article_outlined,
+                  ),
+                  label: "Calendar"),
             ],
+            selectedItemColor: Color(0xff4838D1),
+            unselectedItemColor: Color(0xff6A6A8B),
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
           ),
         ),
       ),

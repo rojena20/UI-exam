@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ui_exam/exercise_card.dart';
 import 'package:ui_exam/feature_card.dart';
 import 'package:ui_exam/feelings_card.dart';
+import 'package:ui_exam/models/exercise_card_model.dart';
 import 'package:ui_exam/models/feature_card_model.dart';
 import 'package:ui_exam/models/feelings_card_model.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -9,6 +11,7 @@ import 'package:ui_exam/moody_section_title.dart';
 
 class MoodyScreen extends StatelessWidget {
   static const String routeName = "MoodyScreen";
+  final PageController _pageController = PageController();
 
   MoodyScreen({super.key});
 
@@ -70,21 +73,32 @@ class MoodyScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          FeelingsCard(
-                            feelingsCardModel: FeelingsCardModel(
-                                feelingImage: "love.png", feelingType: "Love"),
+                          GestureDetector(
+                            child: FeelingsCard(
+                              feelingsCardModel: FeelingsCardModel(
+                                  feelingImage: "love.png",
+                                  feelingType: "Love"),
+                            ),
                           ),
-                          FeelingsCard(
-                            feelingsCardModel: FeelingsCardModel(
-                                feelingImage: "cool.png", feelingType: "Cool"),
+                          GestureDetector(
+                            child: FeelingsCard(
+                              feelingsCardModel: FeelingsCardModel(
+                                  feelingImage: "cool.png",
+                                  feelingType: "Cool"),
+                            ),
                           ),
-                          FeelingsCard(
-                            feelingsCardModel: FeelingsCardModel(
-                                feelingImage: "happy.png", feelingType: "Happy"),
+                          GestureDetector(
+                            child: FeelingsCard(
+                              feelingsCardModel: FeelingsCardModel(
+                                  feelingImage: "happy.png",
+                                  feelingType: "Happy"),
+                            ),
                           ),
-                          FeelingsCard(
-                            feelingsCardModel: FeelingsCardModel(
-                                feelingImage: "sad.png", feelingType: "Sad"),
+                          GestureDetector(
+                            child: FeelingsCard(
+                              feelingsCardModel: FeelingsCardModel(
+                                  feelingImage: "sad.png", feelingType: "Sad"),
+                            ),
                           ),
                         ],
                       ),
@@ -93,14 +107,15 @@ class MoodyScreen extends StatelessWidget {
                         height: 150,
                         margin: EdgeInsets.only(bottom: 10.0),
                         child: PageView.builder(
-                          controller: PageController(),
+                          controller: _pageController,
                           itemCount: 3,
                           itemBuilder: (context, index) {
                             return FeatureCard(
                               featureCardModel: FeatureCardModel(
                                   featureImage: "Walking the Dog.png",
                                   featuteTitle: "Positive vibes",
-                                  featureDesc: "Boost your mood with positive vibes",
+                                  featureDesc:
+                                      "Boost your mood with positive vibes",
                                   featureTime: "10 mins"),
                             );
                           },
@@ -108,7 +123,7 @@ class MoodyScreen extends StatelessWidget {
                       ),
                       Center(
                         child: SmoothPageIndicator(
-                          controller: PageController(),
+                          controller: _pageController,
                           count: 3,
                           effect: ColorTransitionEffect(
                             activeDotColor: Color(0xff98A2B3),
@@ -120,6 +135,40 @@ class MoodyScreen extends StatelessWidget {
                         ),
                       ),
                       MoodySectionTitle(secionTitle: "Exercise"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          ExerciseCard(
+                            exerciseCardModel: ExerciseCardModel(
+                                exerciseImage: "relaxation.png",
+                                exerciseText: "Relaxation",
+                                cardBgColor: Color(0xffF9F5FF)),
+                          ),
+                          ExerciseCard(
+                            exerciseCardModel: ExerciseCardModel(
+                                exerciseImage: "meditation.png",
+                                exerciseText: "Meditation",
+                                cardBgColor: Color(0xffFDF2FA)),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          ExerciseCard(
+                            exerciseCardModel: ExerciseCardModel(
+                                exerciseImage: "breathing.png",
+                                exerciseText: "Breathing",
+                                cardBgColor: Color(0xffFFFAF5),),
+                          ),
+                          ExerciseCard(
+                            exerciseCardModel: ExerciseCardModel(
+                                exerciseImage: "yoga.png",
+                                exerciseText: "Yoga",
+                                cardBgColor: Color(0xffF0F9FF)),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -127,14 +176,34 @@ class MoodyScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Icon(Icons.home_filled, color: Color(0xff667085),),
-            Icon(Icons.grid_view_outlined, color: Color(0xff667085),),
-            Icon(Icons.calendar_today_outlined, color: Color(0xff667085),),
-            Icon(Icons.person, color: Color(0xff667085),),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_filled,
+              ),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.grid_view_outlined,
+                ),
+                label: "Grid"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.calendar_today_outlined,
+                ),
+                label: "Calendar"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person,
+                ),
+                label: "Person"),
           ],
+          selectedItemColor: Color(0xff027A48),
+          unselectedItemColor: Color(0xff667085),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
         ),
       ),
     );
