@@ -144,7 +144,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       HomeSectionTitle(sectionTitle: "Best Seller"),
                       Container(
                         height: 200,
-                        margin: EdgeInsets.only(left: 20.0, top: 10.0),
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
