@@ -8,7 +8,7 @@ class HomeSectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10.0, left: 15.0),
+      margin: EdgeInsets.only(top: 20.0, left: 15.0, bottom: 10.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

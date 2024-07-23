@@ -8,7 +8,10 @@ class BestsellerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 315,
+      color: Color(0xffF5F5FA),
       padding: EdgeInsets.all(20.0),
+      margin: EdgeInsets.symmetric(horizontal: 15.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

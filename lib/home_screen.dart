@@ -25,9 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 margin: EdgeInsets.only(top: 30),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
+                      margin: EdgeInsets.only(left: 30.0),
                       child: Row(
                         children: [
                           Container(
@@ -47,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.only(right: 20.0),
                       child: Image.asset("assets/images/Setting.png"),
                     )
                   ],
@@ -163,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       HomeSectionTitle(sectionTitle: "Best Seller"),
                       Container(
-                        height: 200,
+                        height: 144,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
