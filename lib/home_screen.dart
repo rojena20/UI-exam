@@ -3,8 +3,6 @@ import 'package:ui_exam/bestSeller_card.dart';
 
 //import 'package:motion_tab_bar/MotionBadgeWidget.dart';
 //import 'package:carousel_slider/carousel_slider.dart';
-//import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-//import 'package:badges/badges.dart' as badges;
 //import 'package:chips_choice/chips_choice.dart';
 //import 'package:buttons_tabbar/buttons_tabbar.dart';
 //import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
@@ -137,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
